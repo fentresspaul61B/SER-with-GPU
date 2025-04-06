@@ -9,6 +9,39 @@ Paper for Model: https://arxiv.org/abs/2306.14517
 
 Note: I did not train this model or contribute to the research in anyway. I am simply using this open sourced model, and showing how it can be deployed as an API, so developers can use it more easily when creating applications. 
 
+Here is how the different emotions are categorized:
+
+```python
+negative = [
+    'sadness',
+    'fear',
+    'angry',
+    'disgust',
+    'negative',
+    "frustrated"
+]
+
+positive = [
+    "happiness",
+    "surprise",
+    "positive",
+    "excitement"
+]
+
+neutral = [
+    "neutral",
+    "other",
+    "unknown"
+]
+```
+
+The original model will predict the more granular emotions for example "disgust" or "happiness", and then I made the API simply sort the emotion into its sentiment category of positive negative or neutral. 
+
+TODO: Make it so a flag can be sent to the API to allow for either granular or simplified predictions. 
+
+#### Notes on Model Output Modifications
+I did some changes to the output, which were simply to constrain the emotions into 3 more simple categories which include positive, negative and neutral. 
+
 
 ## Local Setup
 1. Clone the project from GitHub, and open in your IDE. 

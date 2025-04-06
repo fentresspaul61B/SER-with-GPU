@@ -24,6 +24,7 @@ def create_predict_dict(labels, probabilities):
     neg_prob = 0
     pos_prob = 0
     neu_prob = 0
+
     for label, prob in zip(labels, probabilities):
 
         if label == "NEGATIVE":
@@ -66,24 +67,24 @@ class SerModel():
         ]
 
         negative = [
-            'sadness', 
-            'fear', 
-            'angry', 
-            'disgust', 
-            'negative', 
+            'sadness',
+            'fear',
+            'angry',
+            'disgust',
+            'negative',
             "frustrated"
         ]
 
         positive = [
-            "happiness", 
-            "surprise", 
-            "positive", 
+            "happiness",
+            "surprise",
+            "positive",
             "excitement"
         ]
 
         neutral = [
-            "neutral", 
-            "other", 
+            "neutral",
+            "other",
             "unknown"
         ]
 
@@ -95,13 +96,13 @@ class SerModel():
             # Extracting the position of the label in the raw output. 
             label_index = int(item['label'].split('_')[1])
 
-            # Saving the label. 
+            # Saving the label.
             item['emotion'] = label_list[label_index]
 
-            # Resetting the label. 
+            # Resetting the label.
             label = None
 
-            # Sorting the label. 
+            # Sorting the label.
             if item['emotion'] in negative:
                 label = "NEGATIVE"
             elif item['emotion'] in positive:
