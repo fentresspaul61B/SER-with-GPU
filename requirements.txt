@@ -1,8 +1,9 @@
 numpy
-transformers
-torch 
-torchvision 
-torchaudio
+
+torch>=2.1
+torchaudio>=2.1
+transformers>=4.36
+
 accelerate  # Used for local, may not be required on server
 fastapi[all]
 uvicorn
