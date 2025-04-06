@@ -54,7 +54,7 @@ jobs:
             --region ${{ env.REGION }} \
             --cpu 4 \
             --memory 16Gi \
-            --timeout 60 \
+            --timeout 120 \
             --gpu 1 \
             --gpu-type nvidia-l4 \
             --max-instances 1 \

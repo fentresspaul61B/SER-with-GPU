@@ -45,3 +45,14 @@ Navigate to postman:
 
 Also can check GPU and FFMPEG endpoints 
 
+
+## How to Run with Docker Locally
+
+1. Download docker desktop and start it. 
+2. To clean up old containers ```docker system prune -a -f``` CAREFUL, only run this if you want to delete old local containers. 
+3. ```docker build -t ser-gpu .```
+4. ```docker run --name whisper-api-container -p 8080:8080 ser-gpu```
+5. http://localhost:8080/docs
+6. To delete the container: ```docker rm -f /whisper-api-container```
+
+

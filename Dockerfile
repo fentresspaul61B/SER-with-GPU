@@ -27,6 +27,8 @@ RUN apt-get update && \
 # Copy the application code into the container
 COPY main.py .
 
+COPY model.py . 
+
 # Expose port 8080
 EXPOSE 8080
 
