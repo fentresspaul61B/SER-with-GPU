@@ -1,0 +1,8 @@
+numpy
+transformers
+torch 
+torchvision 
+torchaudio
+accelerate  # Used for local, may not be required on server
+fastapi[all]
+uvicorn
