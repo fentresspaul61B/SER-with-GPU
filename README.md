@@ -37,8 +37,6 @@ neutral = [
 
 The original model will predict the more granular emotions for example "disgust" or "happiness", and then I made the API simply sort the emotion into its sentiment category of positive negative or neutral. 
 
-TODO: Make it so a flag can be sent to the API to allow for either granular or simplified predictions. 
-
 #### Notes on Model Output Modifications
 I did some changes to the output, which were simply to constrain the emotions into 3 more simple categories which include positive, negative and neutral. 
 
@@ -125,7 +123,7 @@ Local testing may or may not work depending on your own machines specs. For exam
 - In the drop down menu, select ```Bearer Token```
 - Paste the token from GCP into the text box. 
 
-#### Adding our Data
+#### 5. Adding our Data
 - go to ```body``` and select ```form data``` from the drop down menu.
 - Change to ```Key``` type from ```Text``` to ```File```
 - Under the ```Key``` field, is a text box. In this text box, enter the word "file". 
@@ -144,6 +142,8 @@ If this is an issue, here are a few ways this can be avoided.
 
 
 ## TODO
-Note to self, next project should be a "keep warm" scheduler, where we can set parameters for which time of day to keep the API warm, and the intervals at which the API should be pinged to keep it alive. Then test the response times at any given time of day to verify that its fast. 
+- Make an API which does both speech to text translations, as well as speech emotion predictions. 
+- Next project should be a "keep warm" scheduler, where we can set parameters for which time of day to keep the API warm, and the intervals at which the API should be pinged to keep it alive. Then test the response times at any given time of day to verify that its fast. 
+- TODO: Make it so a flag can be sent to the API to allow for either granular or simplified predictions. 
 
 
